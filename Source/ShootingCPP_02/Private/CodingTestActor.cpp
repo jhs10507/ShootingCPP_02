@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "CodingTestActor.h"
@@ -18,9 +18,14 @@ void ACodingTestActor::BeginPlay()
 	
 	for (int32 i = 0; i < 100; i++)
 	{
-		// number1의 값을 1 증가시킨다.
-		number1++;
-		UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
+		// i를 2로 나눈 나머지 값을 구한다.
+		int32 result = i % 2;
+
+		// result가 0이라면 짝수이므로 출력한다.
+		if (result == 0)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%d는 짝수입니다."), i);
+		}
 	}
 }
 

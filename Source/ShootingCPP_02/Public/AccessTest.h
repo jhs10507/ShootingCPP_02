@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -23,4 +23,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	int32 number; // 일반 변수
+	int32* numPointer; // 포인터 변수
+
+	UPROPERTY(EditAnywhere)
+	class ACodingTestActor* testPointer;
+
+	// 추가한 문장
+	void AddPrint(int32 num1, int32 num2, int32* result);
 };
